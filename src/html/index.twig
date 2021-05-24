@@ -1,0 +1,27 @@
+{% extends 'layouts/base.twig' %}
+
+{% block body %}
+    {% include 'partials/landing/intro.twig' %}
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/stylesheets/landing.css" />
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/javascripts/landing.js"></script>
+
+    <script>
+        var swiper = new Swiper('#intro-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            pagination: {
+                el: '#intro-slider .intro-slider__dots',
+                clickable: true,
+            },
+        });
+    </script>
+{% endblock %}
+ 
