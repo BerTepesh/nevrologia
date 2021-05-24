@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="Author" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  
+  <title>Title</title>
+	<meta name="description" content=""/>        
+	<script>
+		document.documentElement.classList.remove('no-js');
+		document.documentElement.classList.add('js');
+
+		if (document.documentElement.style.setProperty) {
+			document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+			document.documentElement.style.setProperty('--viewport-height-actual', window.innerHeight + 'px');
+		}
+	</script>
+	<link rel="stylesheet" href="assets/stylesheets/global.css" />
+	
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/stylesheets/landing.css" />
+
+</head>
+<body>
+	<div class="page-content-wrapper">
+		
+			
+		
+		
+		<div class="page-content js-page-content">
+				<main>
+					
+    <div class="intro" style="background-image: url(assets/images/landing/intro/1.jpg);">
+	<div class="container">
+		<div class="intro__holder">
+			<div class="intro__info">
+				<div class="intro__pretitle">портал</div>
+				<h1 class="intro__title">nevrologia.info</h1>
+				<div class="intro__text">
+					<p>О неврологии из первых рук.</p>
+					<p>Портал с актуальной информацией для практикующих врачей, созданный при поддержке экспертов «НИИ Инсульта» 	и «РНИУ Минздравсоцразвития». </p>
+					<p>Разбор клинических случаев, обучающие программы, мероприятия и только проверенные материалы. Повышайте свою квалификацию вместе с профессиональным сообществом!</p>
+				</div>
+			</div>
+			<div class="intro__slider">
+				<div class="intro-slider swiper-container" id="intro-slider">
+					<div class="intro-slider__holder swiper-wrapper">
+						<div class="intro-slider__item swiper-slide">
+							<div class="intro-slider__plate">
+								<img src="assets/images/landing/intro/plate.png" alt="">
+							</div>
+							<div class="intro-slider__info">
+								<div class="intro-slider__title">Новый вебинар</div>
+								<p class="intro-slider__text">Роль короновирусной инфекции (COVID-19) в развитии хронической ишимии мозга. Опыт невролога из «красной зоны». Часть 2</p>
+							</div>
+							<div class="intro-slider__presenters">
+								<ul>
+									<li class="presenter">
+										<div class="presenter__photo">
+											<img src="assets/images/landing/intro/presenter/1.jpg" alt="">
+										</div>
+										<div class="presenter__label">
+											Ведущий: <br> 
+											Зотова Наталья Павловна <br>	
+											невролог высшей категории
+										</div>
+									</li>
+									<li class="presenter">
+										<div class="presenter__photo">
+											<img src="assets/images/landing/intro/presenter/2.jpg" alt="">
+										</div>
+										<div class="presenter__label">
+											Ведущий: <br> 
+											Зотова Наталья Павловна <br>	 
+											невролог высшей категории
+										</div>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="intro-slider__detail">подробнее</a>
+						</div>
+						<div class="intro-slider__item swiper-slide" style="background-image: url(assets/images/landing/intro/slider/space.jpg);">
+							<div class="intro-slider__info">
+								<div class="intro-slider__title">Новый вебинар</div>
+								<p class="intro-slider__text">Роль короновирусной инфекции (COVID-19) в развитии хронической ишимии мозга. Опыт невролога из «красной зоны». Часть 2</p>
+							</div>
+							<a href="#" class="intro-slider__detail">подробнее</a>
+						</div>
+						
+					</div>
+					<div class="intro-slider__dots"></div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+				</main>
+				 
+					
+				
+		</div>
+		<div class="js-modal">
+				
+		</div>
+	</div>
+	
+	
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/javascripts/landing.js"></script>
+
+    <script>
+        var swiper = new Swiper('#intro-slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            pagination: {
+                el: '#intro-slider .intro-slider__dots',
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
