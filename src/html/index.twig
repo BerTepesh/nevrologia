@@ -2,6 +2,7 @@
 
 {% block body %}
     {% include 'partials/landing/intro.twig' %}
+    {% include 'partials/landing/content.twig' %}
 {% endblock %}
 
 {% block stylesheets %}
@@ -12,16 +13,5 @@
 {% block javascripts %}
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/javascripts/landing.js"></script>
-
-    <script>
-        var swiper = new Swiper('#intro-slider', {
-            slidesPerView: 'auto',
-            spaceBetween: 15,
-            pagination: {
-                el: '#intro-slider .intro-slider__dots',
-                clickable: true,
-            },
-        });
-    </script>
 {% endblock %}
  
