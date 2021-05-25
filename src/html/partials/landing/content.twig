@@ -51,6 +51,72 @@
 				'url': '/articles/'
 			}
 		]
+	}, {
+		'title': 'Консилиуим',
+		'text': 'Обучающие программы от лучших врачей, доступ к разборам клинических случаев и опыт коллег, кото-рый 		изменит вашу практику.',
+		'url': '/news/',
+		'color': 'marigold',
+		'slides': [
+			{
+				'title': '20',
+				'subtitle': 'разборов клинических случаев',
+				'back': 'assets/images/landing/content/slides/6.jpg',
+				'text': 'Клинические разборы сложных случаев. Освещаем новые методы диагностики и лечения.', 
+				'url': '/news/'
+			}
+		]
+	}, {
+		'title': 'Мероприятия',
+		'text': 'Главные события отечес-твенной неврологии. Пог-ружайтесь в профессио-нальную среду оффлайни онлайн!',
+		'url': '/news/',
+		'color': 'charlotte',
+		'slides': [
+			{
+				'title': 'АРХИВ',
+				'subtitle': '',
+				'back': 'assets/images/landing/content/slides/7.jpg',
+				'text': 'Держите руку на пульсе научного сообщества!', 
+				'url': '/news/'
+			}
+		]
+	}, {
+		'title': 'Лечение',
+		'text': 'Препараты для профилак-тики и реабилитациипосле инсульта',
+		'url': '/news/',
+		'color': 'white-pointer',
+		'slides': [
+			{
+				'title': 'АКТОВЕГИН',
+				'subtitle': '',
+				'back': 'assets/images/landing/content/slides/8.jpg',
+				'text': 'Используется для улучшения процессов обмена и микроциркуляции крови в организме.', 
+				'url': '/news/'
+			}, {
+				'title': 'ЦЕРАКСОН',
+				'subtitle': '',
+				'back': 'assets/images/landing/content/slides/9.jpg',
+				'text': 'Применяется в лечении когнитивных, чувствительных и двигательных неврологических нарушений 	дегенеративнойи сосудистой этиологии.', 
+				'url': '/news/'
+			}, {
+				'title': 'КЕЛТИКАН',
+				'subtitle': '',
+				'back': 'assets/images/landing/content/slides/9.jpg',
+				'text': 'Способствует восстановлению поврежденных нервных волокон при заболеваниях позвоночникаи периферических нервов.', 
+				'url': '/news/'
+			}, {
+				'title': 'ЭРГОКОНАТЫ',
+				'subtitle': '',
+				'back': 'assets/images/landing/content/slides/8.jpg',
+				'text': 'Реабилитация пациентов, перенёсших инсульт: восстановление бытовых навыков больного.', 
+				'url': '/news/'
+			}, {
+				'title': 'Болезнь ФАБРИ',
+				'subtitle': '',
+				'back': 'assets/images/landing/content/slides/9.jpg',
+				'text': 'Диагностикаи клиническая картина.', 
+				'url': '/news/'
+			}
+		]
 	}
 ]	%}
 
@@ -72,8 +138,12 @@
 								<div class="article-card swiper-slide">
 									<div class="article-card__head" style="background-image: url({{ slide.back }});">
 										<div class="article-card__title">
-											<b>{{ slide.title }}</b>
-											{{ slide.subtitle }}
+											{% if (slide.subtitle is defined and slide.subtitle is not empty) %}
+												<div class="article-card__num">{{ slide.title }}</div>
+												{{ slide.subtitle }}
+											{% else %}
+												<div class="article-card__name">{{ slide.title }}</div>
+											{% endif %}
 										</div>
 									</div>
 									<div class="article-card__content">
