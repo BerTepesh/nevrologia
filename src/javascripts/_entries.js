@@ -6,14 +6,8 @@ module.exports = {
     landing:    [
         'common/main.js',
 
-        'components/slick.js',
+        'landing.js',
     ],
 
-    "test":    [
-        'common/main.js',
-        
-        'components/slick.js',
-        'modules/slider.js',
-    ],
 };
  

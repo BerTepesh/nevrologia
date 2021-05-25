@@ -1,0 +1,92 @@
+{% set articleBox = [            
+	{
+		'title': 'Публикации',
+		'text': 'Новости неврологии и актуальные исследования со всего мира с выводамии комментариями экспертов.',
+		'url': '/news/',
+		'color': 'azalea',
+		'slides': [
+			{
+				'title': '2064',
+				'subtitle': 'статей',
+				'back': 'assets/images/landing/content/slides/1.jpg',
+				'text': 'Авторитетные публикации от специалистов по вопросам практической неврологии.', 
+				'url': '/news/'
+			}, {
+				'title': '87',
+				'back': 'assets/images/landing/content/slides/2.jpg',
+				'subtitle': 'новостей и обзоров',
+				'text': 'Обзорные статьи, посвящённые новейшим решениям в области неврологии.', 
+				'url': '/articles/'
+			}
+		]
+	}, {
+		'title': 'Полезные материалы',
+		'text': 'Накапливайте знания вместе с материалами, подобранны-ми нашими экспертами, про-веряйте себя с помощью тес-тов и обгоняйте коллег в рейтинге врачей!',
+		'url': '/news/',
+		'color': 'perano',
+		'slides': [
+			{
+				'title': '148',
+				'subtitle': 'видеолекций',
+				'back': 'assets/images/landing/content/slides/3.jpg',
+				'text': 'Онлайн-лекторий от ведущих экспертов. Повышайте квалификацию не выходя из дома!', 
+				'url': '/news/'
+			}, {
+				'title': '3',
+				'back': 'assets/images/landing/content/slides/4.jpg',
+				'subtitle': 'книги',
+				'text': 'Избранная литература в помощь при обучении и практике.', 
+				'url': '/articles/'
+			}, {
+				'title': '2',
+				'subtitle': 'документа',
+				'back': 'assets/images/landing/content/slides/5.jpg',
+				'text': 'Клинические протоколы, рекомендациии алгоритмы лечения.', 
+				'url': '/news/'
+			}, {
+				'title': '13',
+				'back': 'assets/images/landing/content/slides/4.jpg',
+				'subtitle': 'шкал и памяток',
+				'text': 'Проверенные материалы для работы с пациентами.', 
+				'url': '/articles/'
+			}
+		]
+	}
+]	%}
+
+{% for boxItem in articleBox %}
+	<div class="article-box article-box_{{ boxItem.color }}">
+		<div class="container">
+			<div class="article-box__holder">
+				<div class="article-box__info">
+					<div class="article-box__description">
+						<h2 class="article-box__title">{{ boxItem.title }}</h2>
+						<div class="article-box__text">{{ boxItem.text }}</div>
+					</div>
+					<a href="{{ boxItem.url }}" class="article-box__btn">Перейти к разделу</a>
+				</div>
+				<div class="article-box__slider">
+					<div class="article-slider swiper-container" id="article-slider-{{ loop.index0 }}">
+						<div class="article-slider__holder swiper-wrapper">
+							{% for slide in boxItem.slides %}
+								<div class="article-card swiper-slide">
+									<div class="article-card__head" style="background-image: url({{ slide.back }});">
+										<div class="article-card__title">
+											<b>{{ slide.title }}</b>
+											{{ slide.subtitle }}
+										</div>
+									</div>
+									<div class="article-card__content">
+										<p>{{ slide.text }}</p>
+										<a href="{{ slide.url }}">Перейти</a>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+						<div class="article-slider__dots"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}

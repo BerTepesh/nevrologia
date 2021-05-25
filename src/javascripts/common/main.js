@@ -1,5 +1,7 @@
-import '../modules/sticky-header';
-import '../modules/ham-panel';
+import $ from 'jquery';
+
+// import '../modules/sticky-header';
+// import '../modules/ham-panel';
 // import '../util/polyfill/svg4everybody';
 
 
